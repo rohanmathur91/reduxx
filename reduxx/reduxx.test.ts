@@ -1,24 +1,6 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { createStore } from "./";
-
-type InitialState = {
-  count: number;
-};
-
-type Action =
-  | { type: "INCREMENT"; payload?: number }
-  | { type: "DECREMENT"; payload?: number };
-
-const reducers = (state: InitialState, action: Action) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return { ...state, count: state.count + 1 };
-    case "DECREMENT":
-      return { ...state, count: state.count - 1 };
-    default:
-      throw new Error("Action type not found!");
-  }
-};
+import { InitialState, reducers } from "../";
 
 describe("reduxx", () => {
   it("should initialize the store", () => {
@@ -42,5 +24,24 @@ describe("reduxx", () => {
 
     store.dispatch({ type: "DECREMENT" });
     expect(store.getState()).toEqual({ count: 0 });
+  });
+
+  it("should notify subscribers with updated state", () => {
+    const initialState: InitialState = { count: 0 };
+    const store = createStore(initialState, reducers);
+    const mockSubscribers = { subscriber1: (state: InitialState): void => {} };
+    vi.spyOn(mockSubscribers, "subscriber1");
+
+    store.subscribe(mockSubscribers.subscriber1);
+
+    store.dispatch({ type: "INCREMENT" });
+    expect(store.getState()).toEqual({ count: 1 });
+
+    expect(mockSubscribers.subscriber1).toBeCalledTimes(1);
+
+    store.dispatch({ type: "DECREMENT" });
+    expect(store.getState()).toEqual({ count: 0 });
+
+    expect(mockSubscribers.subscriber1).toBeCalledTimes(2);
   });
 });
