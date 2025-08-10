@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true, // Generate .d.ts files
+    "declarationMap": true, // Generate source maps for .d.ts files
+    "outDir": "./dist/esm",
+    "rootDir": "./", // Input directory
+    "module": "ESNext",
+    "moduleResolution": "node"
+  },
+  "include": ["core.ts"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}

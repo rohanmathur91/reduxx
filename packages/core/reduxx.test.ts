@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
-import { createStore } from ".";
-import { InitialState, reducers } from "../packages/core";
+import { createStore } from "./core";
+import { InitialState, reducers } from "./example";
 
 describe("reduxx", () => {
   it("should initialize the store", () => {
