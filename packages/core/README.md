@@ -1,15 +1,21 @@
-## Minimal redux core implementation
+# Minimal redux core implementation
 
-## Usage
+## Usage:
 
-### For UMD
+### With [npm](https://www.npmjs.com/package/reduxx-core?activeTab=readme)
+
+```sh
+npm i reduxx-core
+```
+
+### With [unpkg](https://unpkg.com/)
 
 ```js
 <script src="https://unpkg.com/reduxx-core@1.0.0/dist/umd/core.min.js"></script>
 ```
 
-### Using npm
+### With [jsdelivr](https://www.jsdelivr.com/package/npm/reduxx-core)
 
-```sh
-npm i reduxx-core
+```js
+<script src="https://cdn.jsdelivr.net/npm/reduxx-core@1.0.0/dist/umd/core.min.js"></script>
 ```
