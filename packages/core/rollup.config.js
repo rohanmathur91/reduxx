@@ -7,22 +7,6 @@ const pkg = require("./package.json");
 const INPUT_FILE = "./src/index.ts";
 
 export default [
-  // ESM build
-  {
-    input: INPUT_FILE,
-    output: {
-      file: pkg.module,
-      format: "esm",
-      sourcemap: true,
-    },
-    plugins: [
-      resolve(),
-      typescript({
-        tsconfig: "./tsconfig.esm.json",
-      }),
-    ],
-    external: ["lodash", ...Object.keys(pkg.peerDependencies || {})],
-  },
   // CommonJS build
   {
     input: INPUT_FILE,
@@ -40,6 +24,23 @@ export default [
     ],
     external: ["lodash", ...Object.keys(pkg.peerDependencies || {})],
   },
+  // ESM build
+  {
+    input: INPUT_FILE,
+    output: {
+      file: pkg.module,
+      format: "esm",
+      sourcemap: true,
+    },
+    plugins: [
+      resolve(),
+      typescript({
+        tsconfig: "./tsconfig.esm.json",
+      }),
+    ],
+    external: ["lodash", ...Object.keys(pkg.peerDependencies || {})],
+  },
+
   // UMD build
   {
     input: INPUT_FILE,
