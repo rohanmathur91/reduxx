@@ -43,7 +43,7 @@ export default [
     input: "./core.ts",
     output: [
       {
-        file: "dist/umd/core.min.js",
+        file: pkg.unpkg,
         format: "umd",
         name: pkg.name,
         sourcemap: true,

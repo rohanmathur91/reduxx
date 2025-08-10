@@ -32,9 +32,13 @@
     "clean": "rm -rf dist",
     "prepublishOnly": "pnpm run build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist/**/*.js",
-    "dist/**/*.d.ts"
+    "dist/**/*.d.ts",
+    "README.md"
   ],
   "keywords": [],
   "author": "",
