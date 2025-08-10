@@ -1,6 +1,6 @@
 {
   "name": "reduxx-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Minimal redux implementation",
   "main": "./dist/cjs/core.js",
   "module": "./dist/esm/core.js",
