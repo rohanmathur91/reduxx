@@ -22,9 +22,4 @@ npm i reduxx-core
 
 ## Codesandbox:
 
-<iframe src="https://codesandbox.io/embed/7v5wrz?view=editor+%2B+preview&module=%2Fsrc%2Findex.js"
-     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="reduxx"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+[![Edit reduxx](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/reduxx-7v5wrz)
