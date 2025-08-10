@@ -1,6 +1,34 @@
 import { describe, it, expect, vi } from "vitest";
 import { createStore } from ".";
-import { InitialState, reducers } from "./example";
+
+type InitialState = {
+  count: number;
+};
+
+export type Action =
+  | { type: "INCREMENT"; payload?: number }
+  | { type: "DECREMENT"; payload?: number }
+  | { type: "INCREMENT_BY"; payload: number }
+  | { type: "DECREMENT_BY"; payload: number }
+  | { type: "SET"; payload: number };
+
+const reducers = (state: InitialState, action: Action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return { ...state, count: state.count + 1 };
+    case "DECREMENT":
+      return { ...state, count: state.count - 1 };
+    case "INCREMENT_BY":
+      return { ...state, count: state.count + action.payload };
+    case "DECREMENT_BY":
+      return { ...state, count: state.count - action.payload };
+    case "SET":
+      return { ...state, count: action.payload };
+
+    default:
+      throw new Error("Action type not found!");
+  }
+};
 
 describe("reduxx", () => {
   it("should initialize the store", () => {
