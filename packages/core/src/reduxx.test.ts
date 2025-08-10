@@ -31,7 +31,7 @@ const reducers = (state: InitialState, action: Action) => {
 };
 
 describe("reduxx", () => {
-  it("should initialize the store", () => {
+  it("should initialize the store with object", () => {
     const initialState: InitialState = { count: 0 };
     const store = createStore(initialState, reducers);
     expect(store.getState()).toEqual({ count: 0 });
@@ -71,5 +71,22 @@ describe("reduxx", () => {
     expect(store.getState()).toEqual({ count: 0 });
 
     expect(mockSubscribers.subscriber1).toBeCalledTimes(2);
+  });
+
+  it("should initialize the store with number", () => {
+    const initialState = 0;
+
+    const reducers = (
+      state: number,
+      action: { type: "INCREMENT"; payload: number },
+    ) => {
+      switch (action.type) {
+        case "INCREMENT":
+          return action.payload + 1;
+      }
+    };
+
+    const store = createStore(initialState, reducers);
+    expect(store.getState()).toEqual(0);
   });
 });
