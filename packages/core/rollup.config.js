@@ -22,7 +22,7 @@ export default [
         tsconfig: "./tsconfig.cjs.json",
       }),
     ],
-    external: ["lodash", ...Object.keys(pkg.peerDependencies || {})],
+    external: [...Object.keys(pkg.peerDependencies || {})],
   },
   // ESM build
   {
@@ -38,7 +38,7 @@ export default [
         tsconfig: "./tsconfig.esm.json",
       }),
     ],
-    external: ["lodash", ...Object.keys(pkg.peerDependencies || {})],
+    external: [...Object.keys(pkg.peerDependencies || {})],
   },
 
   // UMD build
@@ -60,6 +60,6 @@ export default [
         declaration: false,
       }),
     ],
-    external: ["lodash", ...Object.keys(pkg.peerDependencies || {})],
+    external: [...Object.keys(pkg.peerDependencies || {})],
   },
 ];
