@@ -44,6 +44,14 @@ store.subscribe((state) => console.log(`State updated :: ${state.count}`));
 
 // update UI when state updates
 store.subscribe((state) => {
+  if (!rangeInput) {
+    return;
+  }
+
+  if (!container) {
+    return;
+  }
+
   rangeInput.value = `${state.count}`;
   container.innerHTML = `${state.count}`;
 });

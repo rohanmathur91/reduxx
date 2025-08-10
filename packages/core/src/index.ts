@@ -1,10 +1,10 @@
-import * as lodash from "lodash";
+import cloneDeep from "lodash.clonedeep";
 
 export function createStore<State, Action>(
   initialState: State,
   reducers: (state: State, action: Action) => State,
 ) {
-  let state = lodash.cloneDeep(initialState);
+  let state = cloneDeep(initialState);
   const subscribers = new Set<(state: State) => void>();
 
   function getState(): State {
