@@ -1,18 +1,11 @@
 {
-  "name": "reduxx",
+  "name": "@reduxx/root",
   "version": "1.0.0",
   "description": "Minimal redux implementation",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lodash": "^4.17.21",
     "prettier": "^3.0.2",
     "vite": "^4.4.9",
     "vitest": "^0.34.3"
