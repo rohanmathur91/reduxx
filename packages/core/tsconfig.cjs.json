@@ -1,9 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "declaration": true, // Generate .d.ts files
-    "declarationMap": true, // Generate source maps for .d.ts files
-    "module": "CommonJS",
+    "module": "commonjs",
     "outDir": "./dist/cjs"
   }
 }

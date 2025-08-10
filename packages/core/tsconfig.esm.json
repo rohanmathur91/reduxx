@@ -1,9 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "declaration": true, // Generate .d.ts files
-    "declarationMap": true, // Generate source maps for .d.ts files
-    "outDir": "./dist/esm",
-    "module": "esnext"
+    "module": "esnext",
+    "outDir": "./dist/esm"
   }
 }

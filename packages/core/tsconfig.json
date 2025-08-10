@@ -2,11 +2,10 @@
   "compilerOptions": {
     "declaration": true, // Generate .d.ts files
     "module": "esnext",
-    "outDir": "./dist/umd",
-    "target": "ES2020",
-    "lib": ["ES2020", "DOM"],
     "rootDir": "./src", // Input directory
-    "sourceMap": true,
+    "outDir": "./dist/umd",
+    "target": "esnext",
+    "lib": ["ESNext", "DOM"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
