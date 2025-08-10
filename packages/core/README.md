@@ -20,6 +20,6 @@ npm i reduxx-core
 <script src="https://cdn.jsdelivr.net/npm/reduxx-core/dist/umd/core.min.js"></script>
 ```
 
-## Codesandbox:
+## Playground:
 
 [![Edit reduxx](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/reduxx-7v5wrz)
