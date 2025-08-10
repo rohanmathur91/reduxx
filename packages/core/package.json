@@ -1,5 +1,5 @@
 {
-  "name": "@reduxx/core",
+  "name": "reduxx-core",
   "version": "1.0.0",
   "description": "Minimal redux implementation",
   "type": "module",
