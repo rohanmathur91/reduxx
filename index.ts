@@ -1,4 +1,4 @@
-import { createStore } from "./reduxx";
+import { createStore } from "./core";
 
 const rangeInput = document.querySelector(".range") as HTMLInputElement;
 const container = document.querySelector(".container") as HTMLDivElement;
