@@ -11,13 +11,13 @@ npm i reduxx-core
 ### With [unpkg](https://unpkg.com/)
 
 ```js
-<script src="https://unpkg.com/reduxx-core/dist/umd/core.min.js"></script>
+<script src="https://unpkg.com/reduxx-core/dist/umd/index.min.js"></script>
 ```
 
 ### With [jsdelivr](https://www.jsdelivr.com/package/npm/reduxx-core)
 
 ```js
-<script src="https://cdn.jsdelivr.net/npm/reduxx-core/dist/umd/core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reduxx-core/dist/umd/index.min.js"></script>
 ```
 
 ## Playground:
