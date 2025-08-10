@@ -1,5 +1,5 @@
 {
-  "name": "@reduxx/root",
+  "name": "reduxx-root",
   "version": "1.0.0",
   "description": "Minimal redux implementation",
   "keywords": [],
