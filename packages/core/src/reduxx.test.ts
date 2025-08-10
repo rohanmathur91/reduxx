@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { createStore } from "./core";
+import { createStore } from ".";
 import { InitialState, reducers } from "./example";
 
 describe("reduxx", () => {

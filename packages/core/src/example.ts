@@ -1,4 +1,4 @@
-import { createStore } from "../../core";
+import { createStore } from ".";
 
 const rangeInput = document.querySelector(".range") as HTMLInputElement;
 const container = document.querySelector(".container") as HTMLDivElement;

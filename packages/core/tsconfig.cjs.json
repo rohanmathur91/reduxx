@@ -1,14 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "composite": true,
     "declaration": true, // Generate .d.ts files
     "declarationMap": true, // Generate source maps for .d.ts files
     "module": "CommonJS",
     "moduleResolution": "node",
-    "outDir": "./dist/cjs",
-    "rootDir": "./" // Input directory
-  },
-  "include": ["core.ts"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+    "outDir": "./dist/cjs"
+  }
 }

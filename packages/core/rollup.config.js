@@ -4,10 +4,12 @@ import { terser } from "rollup-plugin-terser";
 
 const pkg = require("./package.json");
 
+const INPUT_FILE = "./src/index.ts";
+
 export default [
   // ESM build
   {
-    input: "./core.ts",
+    input: INPUT_FILE,
     output: {
       file: pkg.module,
       format: "esm",
@@ -23,7 +25,7 @@ export default [
   },
   // CommonJS build
   {
-    input: "./core.ts",
+    input: INPUT_FILE,
     output: {
       file: pkg.main,
       format: "cjs",
@@ -40,7 +42,7 @@ export default [
   },
   // UMD build
   {
-    input: "./core.ts",
+    input: INPUT_FILE,
     output: [
       {
         file: pkg.unpkg,
