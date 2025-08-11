@@ -1,10 +1,10 @@
-# Minimal redux core implementation
+## Minimal redux core implementation
 
-# Playground:
+## Playground:
 
 [![Edit reduxx](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/reduxx-7v5wrz)
 
-# Installation:
+## Installation:
 
 ### Using npm
 
