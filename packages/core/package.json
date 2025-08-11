@@ -39,8 +39,12 @@
     "dist/**/*.d.ts",
     "README.md"
   ],
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "redux",
+    "state-management"
+  ],
+  "author": "Rohan Mathur <mathurrohan04@gmail.com>",
+  "homepage": "https://github.com/rohanmathur91/reduxx",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.6",
