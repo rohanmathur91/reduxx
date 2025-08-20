@@ -23,3 +23,9 @@ npm i reduxx-core
 ```js
 <script src="https://cdn.jsdelivr.net/npm/reduxx-core/dist/umd/index.min.js"></script>
 ```
+
+## Getting started:
+Import in project
+```ts
+import { createStore } from "reduxx-core";
+```
